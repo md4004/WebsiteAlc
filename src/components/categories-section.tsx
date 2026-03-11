@@ -32,32 +32,32 @@ const categories = [
 
 export function CategoriesSection() {
     return (
-        <section id="categories" className="relative py-32 px-6 sm:px-8 bg-black overflow-hidden">
+        <section id="categories" className="relative py-28 md:py-36 px-8 sm:px-12 bg-black overflow-hidden">
             {/* Background accent */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-[1200px] mx-auto relative z-10">
                 {/* Section header */}
                 <motion.div
-                    className="text-center mb-20"
+                    className="text-center mb-24"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="text-amber-400/60 text-xs font-medium tracking-[0.3em] uppercase">Browse by Category</span>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+                    <span className="text-amber-400/60 text-xs font-sans font-medium tracking-[0.3em] uppercase">Browse by Category</span>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-5 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 font-serif italic">
                         Collections
                     </h2>
-                    <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-6" />
+                    <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-8" />
                 </motion.div>
 
-                {/* Categories grid */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                {/* Categories grid — increased gap from 6 to 8 */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                     {categories.map((category, index) => (
                         <motion.a
                             key={category.name}
-                            href="#"
+                            href="/collection"
                             className="group relative block rounded-2xl overflow-hidden aspect-[3/4] cursor-pointer"
                             initial={{ opacity: 0, y: 40 }}
                             whileInView={{ opacity: 1, y: 0 }}
@@ -80,13 +80,13 @@ export function CategoriesSection() {
                             <div className="absolute inset-0 rounded-2xl border border-white/5 group-hover:border-amber-500/30 transition-all duration-500" />
 
                             {/* Content */}
-                            <div className="absolute bottom-0 left-0 right-0 p-6">
-                                <span className="text-amber-400/70 text-xs font-medium tracking-widest uppercase">{category.count}</span>
-                                <h3 className="text-2xl font-bold text-white mt-2 group-hover:text-amber-400 transition-colors duration-300">{category.name}</h3>
-                                <p className="text-sm text-neutral-400 mt-1">{category.description}</p>
+                            <div className="absolute bottom-0 left-0 right-0 p-7">
+                                <span className="text-amber-400/70 text-[10px] font-sans font-medium tracking-[0.25em] uppercase">{category.count}</span>
+                                <h3 className="text-2xl font-bold text-white mt-2 group-hover:text-amber-400 transition-colors duration-300 font-serif">{category.name}</h3>
+                                <p className="text-sm text-neutral-400 mt-1.5 font-sans leading-relaxed">{category.description}</p>
 
-                                <div className="flex items-center gap-2 mt-4 text-white/50 group-hover:text-amber-400/80 transition-colors duration-300">
-                                    <span className="text-xs font-medium tracking-wider uppercase">Explore</span>
+                                <div className="flex items-center gap-2 mt-5 text-white/50 group-hover:text-amber-400/80 transition-colors duration-300">
+                                    <span className="text-xs font-sans font-medium tracking-[0.2em] uppercase">Explore</span>
                                     <span className="group-hover:translate-x-2 transition-transform duration-300">→</span>
                                 </div>
                             </div>

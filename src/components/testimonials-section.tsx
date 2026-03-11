@@ -30,31 +30,31 @@ const testimonials = [
 
 export function TestimonialsSection() {
     return (
-        <section className="relative py-32 px-6 sm:px-8 bg-black overflow-hidden">
+        <section className="relative py-28 md:py-36 px-8 sm:px-12 bg-black overflow-hidden">
             {/* Top accent line */}
             <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-amber-500/20 to-transparent" />
 
             {/* Ambient glow */}
             <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] bg-amber-500/[0.03] rounded-full blur-[120px]" />
 
-            <div className="max-w-7xl mx-auto relative z-10">
+            <div className="max-w-[1200px] mx-auto relative z-10">
                 {/* Section header */}
                 <motion.div
-                    className="text-center mb-20"
+                    className="text-center mb-24"
                     initial={{ opacity: 0, y: 30 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.6 }}
                 >
-                    <span className="text-amber-400/60 text-xs font-medium tracking-[0.3em] uppercase">Testimonials</span>
-                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-4 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60">
+                    <span className="text-amber-400/60 text-xs font-sans font-medium tracking-[0.3em] uppercase">Testimonials</span>
+                    <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mt-5 bg-clip-text text-transparent bg-gradient-to-b from-white to-white/60 font-serif italic">
                         What Connoisseurs Say
                     </h2>
-                    <div className="w-16 h-[2px] bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-6" />
+                    <div className="w-20 h-[1px] bg-gradient-to-r from-transparent via-amber-500 to-transparent mx-auto mt-8" />
                 </motion.div>
 
-                {/* Testimonials grid */}
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                {/* Testimonials grid — wider gaps */}
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-10 lg:gap-12">
                     {testimonials.map((testimonial, index) => (
                         <motion.div
                             key={testimonial.name}
@@ -64,24 +64,24 @@ export function TestimonialsSection() {
                             viewport={{ once: true }}
                             transition={{ delay: index * 0.15, duration: 0.6 }}
                         >
-                            <div className="relative rounded-2xl p-8 bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.06] backdrop-blur-sm transition-all duration-500 hover:border-amber-500/20 h-full flex flex-col">
+                            <div className="relative rounded-2xl p-9 bg-gradient-to-b from-white/[0.04] to-transparent border border-white/[0.06] backdrop-blur-sm transition-all duration-500 hover:border-amber-500/20 h-full flex flex-col">
                                 {/* Quote icon */}
-                                <Quote className="w-8 h-8 text-amber-500/20 mb-6" />
+                                <Quote className="w-8 h-8 text-amber-500/20 mb-7" />
 
                                 {/* Stars */}
-                                <div className="flex gap-1 mb-4">
+                                <div className="flex gap-1.5 mb-5">
                                     {[...Array(testimonial.rating)].map((_, i) => (
                                         <Star key={i} size={14} className="text-amber-400 fill-amber-400" />
                                     ))}
                                 </div>
 
                                 {/* Text */}
-                                <p className="text-neutral-300 leading-relaxed flex-1 text-sm">
+                                <p className="text-neutral-300 leading-[1.8] flex-1 text-sm font-sans">
                                     &ldquo;{testimonial.text}&rdquo;
                                 </p>
 
                                 {/* Author */}
-                                <div className="flex items-center gap-4 mt-8 pt-6 border-t border-white/5">
+                                <div className="flex items-center gap-4 mt-10 pt-7 border-t border-white/5">
                                     <div className="relative w-12 h-12 rounded-full overflow-hidden ring-2 ring-amber-500/20">
                                         <Image
                                             src={testimonial.avatar}
@@ -92,8 +92,8 @@ export function TestimonialsSection() {
                                         />
                                     </div>
                                     <div>
-                                        <div className="font-semibold text-white text-sm">{testimonial.name}</div>
-                                        <div className="text-xs text-amber-400/60">{testimonial.role}</div>
+                                        <div className="font-semibold text-white text-sm font-sans">{testimonial.name}</div>
+                                        <div className="text-xs text-amber-400/60 tracking-wide font-sans mt-0.5">{testimonial.role}</div>
                                     </div>
                                 </div>
                             </div>

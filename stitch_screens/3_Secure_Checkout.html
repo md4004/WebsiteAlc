@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Secure Checkout | Premium Experience</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#221f10",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        body { font-family: 'Work Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Top Navigation -->
+<header class="flex items-center justify-between border-b border-slate-200 dark:border-white/10 px-6 lg:px-20 py-4 bg-background-light dark:bg-background-dark sticky top-0 z-50">
+<div class="flex items-center gap-4 text-slate-900 dark:text-white">
+<div class="size-8 text-primary">
+<svg fill="none" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+<path d="M42.4379 44C42.4379 44 36.0744 33.9038 41.1692 24C46.8624 12.9336 42.2078 4 42.2078 4L7.01134 4C7.01134 4 11.6577 12.932 5.96912 23.9969C0.876273 33.9029 7.27094 44 7.27094 44L42.4379 44Z" fill="currentColor"></path>
+</svg>
+</div>
+<h2 class="text-xl font-bold tracking-tight">LUXE</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="hidden md:flex items-center gap-2 text-sm font-medium text-slate-500 dark:text-slate-400">
+<span class="material-symbols-outlined text-sm">lock</span>
+                    SSL Encrypted
+                </span>
+<button class="flex items-center justify-center rounded-lg h-10 bg-slate-200 dark:bg-white/10 text-slate-900 dark:text-white px-4 hover:bg-primary hover:text-background-dark transition-colors">
+<span class="material-symbols-outlined">help_outline</span>
+</button>
+</div>
+</header>
+<main class="mx-auto max-w-7xl w-full px-6 lg:px-20 py-10">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+<!-- Main Checkout Form -->
+<div class="lg:col-span-8 flex flex-col gap-10">
+<!-- Progress Bar -->
+<div class="flex items-center gap-4 mb-2">
+<div class="flex items-center gap-2 text-primary">
+<span class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-primary font-bold text-sm">1</span>
+<span class="font-bold">Shipping</span>
+</div>
+<div class="h-px grow bg-slate-200 dark:bg-white/10"></div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-slate-300 dark:border-white/10 font-bold text-sm">2</span>
+<span>Delivery</span>
+</div>
+<div class="h-px grow bg-slate-200 dark:bg-white/10"></div>
+<div class="flex items-center gap-2 text-slate-400">
+<span class="flex items-center justify-center w-8 h-8 rounded-full border-2 border-slate-300 dark:border-white/10 font-bold text-sm">3</span>
+<span>Payment</span>
+</div>
+</div>
+<header>
+<h1 class="text-4xl font-black tracking-tight mb-2">Checkout</h1>
+<p class="text-slate-500 dark:text-slate-400">Complete your order with our secure checkout process.</p>
+</header>
+<!-- Section 1: Shipping -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<h2 class="text-2xl font-bold tracking-tight">Shipping Address</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">First Name</label>
+<input class="rounded-lg bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="John" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Last Name</label>
+<input class="rounded-lg bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="Doe" type="text"/>
+</div>
+<div class="flex flex-col gap-2 md:col-span-2">
+<label class="text-sm font-medium">Street Address</label>
+<input class="rounded-lg bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="123 Luxury Lane" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">City</label>
+<input class="rounded-lg bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="Beverly Hills" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Zip Code</label>
+<input class="rounded-lg bg-white dark:bg-white/5 border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="90210" type="text"/>
+</div>
+</div>
+</section>
+<!-- Section 2: Delivery Method -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">local_shipping</span>
+<h2 class="text-2xl font-bold tracking-tight">Delivery Method</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<label class="relative flex cursor-pointer rounded-xl border-2 border-primary bg-primary/5 p-4 focus:outline-none">
+<input checked="" class="sr-only" name="delivery" type="radio"/>
+<div class="flex flex-col gap-1">
+<div class="flex items-center gap-2">
+<span class="font-bold">Premium Courier</span>
+<span class="text-xs bg-primary text-background-dark px-2 py-0.5 rounded-full font-bold uppercase">Fastest</span>
+</div>
+<p class="text-sm text-slate-500 dark:text-slate-400">Next-day delivery with live tracking</p>
+<p class="mt-2 font-bold text-primary">$25.00</p>
+</div>
+<span class="material-symbols-outlined absolute right-4 top-4 text-primary">check_circle</span>
+</label>
+<label class="relative flex cursor-pointer rounded-xl border-2 border-slate-200 dark:border-white/10 p-4 focus:outline-none hover:border-primary/50 transition-colors">
+<input class="sr-only" name="delivery" type="radio"/>
+<div class="flex flex-col gap-1">
+<span class="font-bold">Standard Boutique</span>
+<p class="text-sm text-slate-500 dark:text-slate-400">3-5 business days delivery</p>
+<p class="mt-2 font-bold text-slate-900 dark:text-white">$10.00</p>
+</div>
+</label>
+</div>
+<div class="bg-primary/10 rounded-xl p-6 border border-primary/20">
+<h3 class="font-bold mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined">featured_seasonal_and_gifts</span>
+                                Packaging Options
+                            </h3>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<input class="rounded text-primary focus:ring-primary bg-transparent border-slate-400" id="gift" type="checkbox"/>
+<label class="text-sm" for="gift">
+<span class="font-medium block">Luxe Gift Packaging</span>
+<span class="text-slate-500 text-xs">Signature gold-foil box with hand-written card</span>
+</label>
+</div>
+<span class="font-bold text-sm">+$15.00</span>
+</div>
+</div>
+</section>
+<!-- Section 3: Secure Payment -->
+<section class="flex flex-col gap-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">verified_user</span>
+<h2 class="text-2xl font-bold tracking-tight">Secure Payment</h2>
+</div>
+<div class="flex gap-2">
+<div class="h-6 w-10 bg-slate-200 dark:bg-white/10 rounded overflow-hidden">
+<div class="h-full w-full bg-slate-400 flex items-center justify-center text-[8px] font-bold text-white">VISA</div>
+</div>
+<div class="h-6 w-10 bg-slate-200 dark:bg-white/10 rounded overflow-hidden">
+<div class="h-full w-full bg-slate-400 flex items-center justify-center text-[8px] font-bold text-white">AMEX</div>
+</div>
+<div class="h-6 w-10 bg-slate-200 dark:bg-white/10 rounded overflow-hidden">
+<div class="h-full w-full bg-slate-400 flex items-center justify-center text-[8px] font-bold text-white">MASTER</div>
+</div>
+</div>
+</div>
+<div class="bg-white dark:bg-white/5 rounded-xl p-6 border border-slate-200 dark:border-white/10 flex flex-col gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Card Number</label>
+<div class="relative">
+<input class="w-full rounded-lg bg-transparent border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="0000 0000 0000 0000" type="text"/>
+<span class="material-symbols-outlined absolute right-3 top-1/2 -translate-y-1/2 text-slate-400">credit_card</span>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">Expiry Date</label>
+<input class="rounded-lg bg-transparent border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="MM / YY" type="text"/>
+</div>
+<div class="flex flex-col gap-2">
+<label class="text-sm font-medium">CVV</label>
+<input class="rounded-lg bg-transparent border-slate-200 dark:border-white/10 focus:border-primary focus:ring-1 focus:ring-primary p-3" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+<button class="w-full py-4 bg-primary text-background-dark font-black rounded-lg text-lg hover:brightness-110 transition-all shadow-lg shadow-primary/20 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined font-bold">lock</span>
+                            COMPLETE SECURE PURCHASE
+                        </button>
+<p class="text-center text-xs text-slate-500 dark:text-slate-400">
+                            By clicking complete purchase, you agree to our <a class="underline" href="#">Terms of Service</a> and <a class="underline" href="#">Privacy Policy</a>.
+                        </p>
+</section>
+</div>
+<!-- Order Summary Sidebar -->
+<div class="lg:col-span-4">
+<div class="sticky top-28 bg-white dark:bg-white/5 rounded-2xl border border-slate-200 dark:border-white/10 overflow-hidden">
+<div class="p-6 border-b border-slate-200 dark:border-white/10">
+<h3 class="text-xl font-bold tracking-tight">Order Summary</h3>
+</div>
+<div class="p-6 flex flex-col gap-4">
+<!-- Item -->
+<div class="flex gap-4">
+<div class="h-20 w-20 bg-slate-100 dark:bg-white/10 rounded-lg overflow-hidden flex-shrink-0">
+<img class="h-full w-full object-cover" data-alt="Premium minimalist white wristwatch on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDju0ALpNG6p2wSQouUJpxngKxIInD83rUui5YJEH8g3KpNYW5ayTY5iiwjpSIzLVSsFidR9gHDbDe8LnxPajd6vlzCtlR49vO8SUHSu2Jd-t81HphA-QQDZjjEOvkFcQ-dVb0_ZrzD4829jmd35I6f1sV337jO8IMiZjTmNi4s_fcJyHDCmFTgaQOwmLnRQM8tJp5LrOzztrco5k2uPDmt417X8woguy9tK2mscRCMLtYpMMnHAab6RYg4njSXMxvxf0lkgdlV9SKF"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-sm">Chronos Gold Watch</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Limited Edition / Gold</p>
+<p class="text-sm font-bold mt-1">$1,250.00</p>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="h-20 w-20 bg-slate-100 dark:bg-white/10 rounded-lg overflow-hidden flex-shrink-0">
+<img class="h-full w-full object-cover" data-alt="Folded luxury white designer silk shirt" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoFo2KqMazCkC-0HuCaMayXtX1xwt5_A8YfxIJmqpAv0-aiSw8EcRoi_53mMyY_vB6rm44otVCWffys3LlIl4Te01zNVVecFn1xqul2V5S4N3njPZ4SpH-_AIgyoF-4q6RkZfVOQzzPmnlav6yfG0yJ4DAti5OsY9TtIV9AktSAdCGrFuOMlSmScnxwQBHr27XH-XcRKjC5w9yjW7ka4tAKWfL0tyN1nB0xEauAZKRlM7Urz-y6ZkbA_Jw2pzUYKySnPq2cdyQzRQb"/>
+</div>
+<div class="flex flex-col justify-center">
+<h4 class="font-bold text-sm">Signature Silk Shirt</h4>
+<p class="text-xs text-slate-500 dark:text-slate-400">Ivory / Medium</p>
+<p class="text-sm font-bold mt-1">$450.00</p>
+</div>
+</div>
+<div class="h-px bg-slate-200 dark:bg-white/10 my-2"></div>
+<div class="flex flex-col gap-3">
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Subtotal</span>
+<span class="font-medium">$1,700.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Shipping</span>
+<span class="font-medium">$25.00</span>
+</div>
+<div class="flex justify-between text-sm">
+<span class="text-slate-500 dark:text-slate-400">Estimated Tax</span>
+<span class="font-medium">$136.00</span>
+</div>
+</div>
+<div class="h-px bg-slate-200 dark:bg-white/10 my-2"></div>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold">Total</span>
+<span class="text-2xl font-black text-primary">$1,861.00</span>
+</div>
+<div class="mt-4 p-4 bg-background-light dark:bg-background-dark rounded-xl border border-slate-200 dark:border-white/10">
+<div class="flex items-center gap-3 text-xs">
+<span class="material-symbols-outlined text-primary text-sm">shield</span>
+<p class="text-slate-500 dark:text-slate-400">Your information is protected by 256-bit AES encryption.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer / Trust Badges -->
+<footer class="px-6 lg:px-20 py-10 border-t border-slate-200 dark:border-white/10 mt-10">
+<div class="flex flex-wrap justify-center gap-8 md:gap-16 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">verified</span>
+<span class="font-bold tracking-widest text-xs">TRUSTED MERCHANT</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">lock_reset</span>
+<span class="font-bold tracking-widest text-xs">SAFE CHECKOUT</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">published_with_changes</span>
+<span class="font-bold tracking-widest text-xs">FREE RETURNS</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-2xl">support_agent</span>
+<span class="font-bold tracking-widest text-xs">24/7 CONCIERGE</span>
+</div>
+</div>
+</footer>
+</div>
+</body></html>

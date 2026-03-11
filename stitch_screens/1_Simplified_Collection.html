@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luxe Spirits | The Prestige Collection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#f2d00d",
+                        "background-light": "#f8f8f5",
+                        "background-dark": "#0a0a0a",
+                    },
+                    fontFamily: {
+                        "display": ["Work Sans", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>
+        body {
+            font-family: 'Work Sans', sans-serif;
+        }
+        .product-card:hover {
+            border-color: #f2d00d;
+            box-shadow: 0 0 20px rgba(242, 208, 13, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-slate-100 min-h-screen">
+<div class="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden">
+<div class="layout-container flex h-full grow flex-col">
+<!-- Header Section -->
+<header class="flex items-center justify-between whitespace-nowrap border-b border-primary/10 px-6 md:px-20 py-6 sticky top-0 bg-background-dark/80 backdrop-blur-md z-50">
+<div class="flex items-center gap-12">
+<div class="flex items-center gap-3 text-primary">
+<span class="material-symbols-outlined text-3xl">storm</span>
+<h2 class="text-slate-100 text-xl font-black leading-tight tracking-[0.2em] uppercase">Luxe Spirits</h2>
+</div>
+<nav class="hidden lg:flex items-center gap-10">
+<a class="text-slate-300 hover:text-primary text-xs font-bold tracking-widest uppercase transition-colors" href="#">Collections</a>
+<a class="text-slate-300 hover:text-primary text-xs font-bold tracking-widest uppercase transition-colors" href="#">Rare Finds</a>
+<a class="text-slate-300 hover:text-primary text-xs font-bold tracking-widest uppercase transition-colors" href="#">Curated Gifts</a>
+</nav>
+</div>
+<div class="flex flex-1 justify-end gap-6 items-center">
+<label class="hidden md:flex flex-col min-w-40 h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded-full h-full bg-white/5 border border-white/10 focus-within:border-primary/50 transition-all">
+<div class="text-slate-400 flex items-center justify-center pl-4">
+<span class="material-symbols-outlined text-xl">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 border-none bg-transparent focus:ring-0 text-slate-100 placeholder:text-slate-500 text-sm font-medium pl-2" placeholder="Search archive..." value=""/>
+</div>
+</label>
+<div class="flex gap-4">
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-white/5 hover:bg-primary/20 text-slate-100 transition-all border border-white/10 hover:border-primary/40">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+</button>
+<button class="flex items-center justify-center rounded-full h-10 w-10 bg-primary text-background-dark hover:scale-105 transition-all">
+<span class="material-symbols-outlined text-xl font-bold">person</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-[1400px] mx-auto w-full px-6 md:px-10 py-12">
+<!-- Hero Content -->
+<div class="flex flex-col gap-6 mb-16 text-center lg:text-left">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 self-center lg:self-start">
+<span class="w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span>
+<span class="text-[10px] font-bold tracking-[0.2em] uppercase text-primary">Exclusive Access</span>
+</div>
+<h1 class="text-slate-100 text-5xl md:text-7xl font-light leading-tight tracking-tight max-w-3xl">
+                        The <span class="text-primary font-bold">Prestige</span> Collection
+                    </h1>
+<p class="text-slate-400 text-lg font-light leading-relaxed max-w-2xl">
+                        An ultra-rare assembly of world-class spirits, meticulously curated for the most discerning connoisseurs of liquid gold.
+                    </p>
+</div>
+<!-- Filter Controls -->
+<div class="flex flex-wrap items-center gap-4 mb-12 pb-8 border-b border-white/5">
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full bg-primary px-6 text-background-dark text-xs font-bold tracking-widest uppercase transition-all">
+                        All Spirits
+                    </button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full border border-white/10 bg-transparent px-6 text-slate-300 text-xs font-bold tracking-widest uppercase hover:border-primary/50 transition-all">
+                        Single Malt <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full border border-white/10 bg-transparent px-6 text-slate-300 text-xs font-bold tracking-widest uppercase hover:border-primary/50 transition-all">
+                        Vintage Cognac <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<button class="flex h-10 items-center justify-center gap-x-2 rounded-full border border-white/10 bg-transparent px-6 text-slate-300 text-xs font-bold tracking-widest uppercase hover:border-primary/50 transition-all">
+                        Artisan Tequila <span class="material-symbols-outlined text-sm">keyboard_arrow_down</span>
+</button>
+<div class="ml-auto flex items-center gap-4">
+<span class="text-slate-500 text-xs font-bold tracking-widest uppercase">Sort By:</span>
+<button class="flex items-center gap-1 text-primary text-xs font-bold tracking-widest uppercase">
+                            Newest <span class="material-symbols-outlined text-sm">sort</span>
+</button>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<!-- Product Card 1 -->
+<div class="product-card group flex flex-col gap-6 p-4 rounded-xl border border-white/5 bg-white/[0.02] transition-all duration-500">
+<div class="relative overflow-hidden rounded-lg aspect-[3/4] bg-[#1a1a1a] flex items-center justify-center">
+<img class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" data-alt="Premium Macallan whiskey bottle on dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjG5hFNMv-cdQ1AY2lEOPRxKOMckW8yEladtL3HHTWxoZbvA6SkjcWF3-w5WCJQtPRsFiJD-QIr4j9q-ha1UdXTtBWMEbZvpVvKyzSj8YqHTR3XGhe2-fUVBoa28_V-SD249LWBg7BetGxPP0a3nJQgJtW1VzAqTXT-gwdu9YEDeDlqdrOEyW7Nk1Brg-EDmjYX_nUmaVUOmbndeau-Au_OLWnL5HGsnij7K1oBbXyTJWgO8c7jg3VngMFEQ7A0XEvq1YHBNyHzOm0"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">view_in_ar</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-white/10 text-slate-300 flex items-center justify-center hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-slate-100 text-lg font-bold tracking-tight">Macallan 25 Year Old</p>
+<p class="text-primary text-lg font-black leading-normal">$2,500.00</p>
+</div>
+<p class="text-slate-500 text-xs font-bold tracking-[0.1em] uppercase italic">Speyside Single Malt</p>
+<button class="mt-4 w-full py-3 rounded bg-white/5 border border-white/10 text-slate-100 text-[10px] font-black tracking-[0.2em] uppercase group-hover:bg-primary group-hover:text-background-dark transition-all">
+                                Reserve Bottle
+                            </button>
+</div>
+</div>
+<!-- Product Card 2 -->
+<div class="product-card group flex flex-col gap-6 p-4 rounded-xl border border-white/5 bg-white/[0.02] transition-all duration-500">
+<div class="relative overflow-hidden rounded-lg aspect-[3/4] bg-[#1a1a1a] flex items-center justify-center">
+<img class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" data-alt="Elegant Louis XIII Cognac decanter" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCgNYNsN-5LLzwWM3F8Ibfjym7-dmg6lPsqmJrehe1hav-8HrrCvuUDpdKXWtucjRgVx8mDY_WHf4g9BheIE8M2cHfxqpM-9TfjyVzP3HL8v8QuN5-kkQ7Iqk5ds7GchzVv-qCmxtzKSQZwTvGiGEetVtS5jRE8kh7uC5JxgwArw_FgnqAUqXqAloQ-NZEfHEQNixAPAEBOapM0D0GvwLgi0h7jNEo7e0KwX7S-IrrYJPIBltU9UP_Hv-WYfVoHXxbjCUuhOprB6J6N"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">view_in_ar</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-white/10 text-slate-300 flex items-center justify-center hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-slate-100 text-lg font-bold tracking-tight">Louis XIII Cognac</p>
+<p class="text-primary text-lg font-black leading-normal">$4,200.00</p>
+</div>
+<p class="text-slate-500 text-xs font-bold tracking-[0.1em] uppercase italic">Grande Champagne Cru</p>
+<button class="mt-4 w-full py-3 rounded bg-white/5 border border-white/10 text-slate-100 text-[10px] font-black tracking-[0.2em] uppercase group-hover:bg-primary group-hover:text-background-dark transition-all">
+                                Reserve Bottle
+                            </button>
+</div>
+</div>
+<!-- Product Card 3 -->
+<div class="product-card group flex flex-col gap-6 p-4 rounded-xl border border-white/5 bg-white/[0.02] transition-all duration-500">
+<div class="relative overflow-hidden rounded-lg aspect-[3/4] bg-[#1a1a1a] flex items-center justify-center">
+<img class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" data-alt="Clase Azul Ultra tequila dark luxury bottle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCb8jgh_nsG4jQSxkesqU7j4J8T1CklNoHu_xSTnEXaAT2usbzvVE_ua3GMRubH7L4JPpg8UVQEe6GrI50M28vw9x1kEy5kg_YxQ8phOMunViwXUudw4Sy5xxxpoU1lSUHehjbutRBC8gM9Xy-lbkGbiQYeMVSnzT-2034d3pvlDFfjuM-YfsL0vswHba19QnkBbOm6juBu5Z5x18gtxRXRLruSKUVNi-daz8pIqIHKJm_AtrVN7flOEmhuq7AePixAlMw4pCmM3LvU"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">view_in_ar</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-white/10 text-slate-300 flex items-center justify-center hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-slate-100 text-lg font-bold tracking-tight">Clase Azul Ultra</p>
+<p class="text-primary text-lg font-black leading-normal">$1,800.00</p>
+</div>
+<p class="text-slate-500 text-xs font-bold tracking-[0.1em] uppercase italic">Extra Añejo Reserve</p>
+<button class="mt-4 w-full py-3 rounded bg-white/5 border border-white/10 text-slate-100 text-[10px] font-black tracking-[0.2em] uppercase group-hover:bg-primary group-hover:text-background-dark transition-all">
+                                Reserve Bottle
+                            </button>
+</div>
+</div>
+<!-- Product Card 4 -->
+<div class="product-card group flex flex-col gap-6 p-4 rounded-xl border border-white/5 bg-white/[0.02] transition-all duration-500">
+<div class="relative overflow-hidden rounded-lg aspect-[3/4] bg-[#1a1a1a] flex items-center justify-center">
+<img class="object-cover w-full h-full opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-700" data-alt="Hibiki 21 year old Japanese whisky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAG_t73IihQuzuw_MAGhJe-IzuaMT37uz-cKmDwC_H6Jixi-KvkbgJ1IAU5iVP8SMVjqCXYG0dIJaM7Kx55VN97Ni3YsgPFRphB651HE-ry_JSPdVHjfiqihPwRCQLpdaLMqQ2fbzpG_SJvT8MF2D0O_OBn9_ae6D_4H1Sb7EUkvUAtP9O0_nmlGhXlafdyP1zEKqyUgUf4HaCbGI0wOSXn57LCULV2ShfPSEwW25JUSdZU_ZxTlZh0IxMUL-bEt4rrps6OiIgmLoxw"/>
+<div class="absolute top-4 right-4 flex flex-col gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-primary/30 text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-xl">view_in_ar</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-background-dark/80 backdrop-blur border border-white/10 text-slate-300 flex items-center justify-center hover:text-primary">
+<span class="material-symbols-outlined text-xl">favorite</span>
+</button>
+</div>
+</div>
+<div class="flex flex-col gap-2">
+<div class="flex justify-between items-start">
+<p class="text-slate-100 text-lg font-bold tracking-tight">Hibiki 21 Year</p>
+<p class="text-primary text-lg font-black leading-normal">$1,250.00</p>
+</div>
+<p class="text-slate-500 text-xs font-bold tracking-[0.1em] uppercase italic">Japanese Blended Art</p>
+<button class="mt-4 w-full py-3 rounded bg-white/5 border border-white/10 text-slate-100 text-[10px] font-black tracking-[0.2em] uppercase group-hover:bg-primary group-hover:text-background-dark transition-all">
+                                Reserve Bottle
+                            </button>
+</div>
+</div>
+</div>
+<!-- Section Footer -->
+<div class="mt-24 border-t border-white/5 pt-12 text-center">
+<h3 class="text-primary text-[10px] font-black tracking-[0.4em] uppercase mb-4">Limited Availability</h3>
+<p class="text-slate-400 text-sm font-light italic">Quantities are restricted to one bottle per collector for items valued above $2,000.</p>
+</div>
+</main>
+<!-- Bottom Navigation/Footer Subtle -->
+<footer class="mt-auto py-10 px-20 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6">
+<p class="text-slate-600 text-[10px] font-medium tracking-widest uppercase">© 2024 LUXE SPIRITS ARCHIVE. ALL RIGHTS RESERVED.</p>
+<div class="flex gap-8">
+<a class="text-slate-600 hover:text-primary text-[10px] font-medium tracking-widest uppercase transition-colors" href="#">Privacy</a>
+<a class="text-slate-600 hover:text-primary text-[10px] font-medium tracking-widest uppercase transition-colors" href="#">Terms</a>
+<a class="text-slate-600 hover:text-primary text-[10px] font-medium tracking-widest uppercase transition-colors" href="#">Shipping</a>
+</div>
+<div class="flex gap-4">
+<span class="material-symbols-outlined text-slate-500 text-xl cursor-pointer hover:text-primary transition-colors">public</span>
+<span class="material-symbols-outlined text-slate-500 text-xl cursor-pointer hover:text-primary transition-colors">qr_code_2</span>
+</div>
+</footer>
+</div>
+</div>
+</body></html>
